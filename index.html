@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- owl carousel -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>E-store Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>E-store</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart_and_search">
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button type="submit">Search</button>
+            </div>
+            <div class="cart">
+                <a href="#cart"><i class="fas fa-shopping-cart"></i> (0)</a>
+            </div>
+        </div>
+    </nav>
+    <!-- <svg width="0" height="0"> -->
+        <!-- <defs> -->
+            <!-- <clipPath id="header-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Header path -->
+            <!-- <path d="M 0.04,0.15 L 0.18,0.15 A 0.02,0.02 0,0,0 0.2,0.12 L 0.2,0.03 A 0.02,0.02 0,0,1 0.22,0 L 0.98,0 A 0.02,0.02 0,0,1 1,0.03 L 1,0.59 L 0.7,0.59 A 0.02,0.02 0,0,0 0.68,0.62 L 0.68,0.97 A 0.02,0.02 0,0,1 0.66,1 L 0.04,1 A 0.02,0.02 0,0,1 0.04,0.94 L 0.02,0.97 L 0.02,0.18 A 0.02,0.02 0,0,1 0.04,0.15 Z" /> -->
+            <!-- </clipPath> -->
+            <!-- <clipPath id="discount-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Discount path -->
+            <!-- </clipPath> -->
+            <!-- <clipPath id="form-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Form path -->
+            <!-- </clipPath> -->
+        <!-- </defs> -->
+    <!-- </svg> -->
+
+    <!-- <style>
+        header.hero {
+            clip-path: url(#header-clip);
+        }
+        .discount-message {
+            clip-path: url(#discount-clip);
+        }
+        .form-section {
+            clip-path: url(#form-clip);
+        }
+    </style> -->
+
+    <header class="hero">
+        <h1>Welcome to E-store</h1>
+        <p>Your one-stop shop for everything!</p>
+        <a href="#products" class="btn">Shop Now</a>
+
+        <div class="product-slider">
+            <div class="owl-carousel owl-theme">
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Classic Sneaker">
+                    <div class="text-content">
+                        <h4>Black Classic Sneaker</h4>
+                        <p>Stylish and comfortable black sneakers for everyday wear.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/nike_sneaker.jpg" alt="Nike Performance Sneaker">
+                    <div class="text-content">
+                        <h4>Nike Performance Sneaker</h4>
+                        <p>High-performance sneakers designed for athletes.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Pro">
+                    <div class="text-content">
+                        <h4>Red Nike Pro</h4>
+                        <p>Bold red sneakers with superior comfort and style.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/white_sneaker.jpg" alt="White Casual Sneaker">
+                    <div class="text-content">
+                        <h4>White Casual Sneaker</h4>
+                        <p>Clean and versatile white sneakers for any occasion.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Urban Sneaker">
+                    <div class="text-content">
+                        <h4>Black Urban Sneaker</h4>
+                        <p>Durable black sneakers with a modern urban look.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/nike_sneaker.jpg" alt="Nike Elite Runner">
+                    <div class="text-content">
+                        <h4>Nike Elite Runner</h4>
+                        <p>Lightweight sneakers for enhanced running performance.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Sport">
+                    <div class="text-content">
+                        <h4>Red Nike Sport</h4>
+                        <p>Vibrant red sneakers with advanced cushioning.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/white_sneaker.jpg" alt="White Premium Sneaker">
+                    <div class="text-content">
+                        <h4>White Premium Sneaker</h4>
+                        <p>Premium white sneakers with a sleek design.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1620794341491-76be6eeb6946?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWRpZGFzfGVufDB8fDB8fHww" alt="Red Nike Classic">
+                    <div class="text-content">
+                        <h4>Red Nike Classic</h4>
+                        <p>Classic red sneakers with timeless style.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Pro Sneaker">
+                    <div class="text-content">
+                        <h4>Black Pro Sneaker</h4>
+                        <p>Professional-grade black sneakers for all-day comfort.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Ultra">
+                    <div class="text-content">
+                        <h4>Red Nike Ultra</h4>
+                        <p>Ultra-light red sneakers for maximum agility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const slidewrapper = document.getElementById('sliderWrapper');
+            const slidesSection = slidewrapper.querySelectorAll('.slide');
+            const dotsContainerNav = document.getElementById('dots');
+            let currentIndexNo = 0;
+            let autoSlideIntervalBehaviour;
+
+            // Create dots
+            for (let i = 0; i < slidesSection.length; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainerNav.appendChild(dot);
+            }
+
+            function updateSlider() {
+                slidewrapper.style.transform = `translateX(-${currentIndexNo * 100}%)`;
+                const dots = dotsContainerNav.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndexNo);
+                });
+                console.log(`Current slide index: ${currentIndexNo}`);
+            }
+
+            function nextSlide() {
+                currentIndexNo = (currentIndexNo + 1) % slidesSection.length;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function prevSlide() {
+                currentIndexNo = (currentIndexNo - 1 + slidesSection.length) % slidesSection.length;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function goToSlide(index) {
+                currentIndexNo = index;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function startAutoSlide() {
+                autoSlideIntervalBehaviour = setInterval(nextSlide, 5000);
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideIntervalBehaviour);
+                startAutoSlide();
+            }
+
+            // Ensure each slide takes exactly 100% of the container width
+            slidesSection.forEach(slide => {
+                slide.style.flex = '0 0 100%';
+                slide.style.width = '100%';
+            });
+
+            startAutoSlide();
+            updateSlider(); // Initialize slider position
+        </script>
+
+
+    </header>
+    <!-- discount content -->
+    <div class="discount-message">
+        <h2>Special Offer!</h2>
+        <p>Use code <strong>WELCOME20</strong> at checkout</p>
+        <p>Limited time offer!</p>
+        <!-- <img src="./images/discount.png" alt="Discount Image">
+        <p>Don't miss out on our exclusive deals!</p>
+        <p>Sign up for our newsletter to stay updated!</p>
+        <p>Follow us on social media for more offers!</p>
+        <p>Free shipping on orders over $50!</p>            
+        <p>Get 20% off on your first purchase!</p>
+        <p>Shop now and save big!</p> -->
+    </div>
+    <div class="form-section">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <div>
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div>
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div>
+                <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <section id="products" class="featured-products">
+        <d class="featured-product-list">
+            <div class="featured-product-item first-fea" style="grid-area: box-1;">
+                <button class="lm">Learn More</button>
+                <h1>DISCOVER </h1>
+                <h1 style="margin-left: 2rem;">AMAZING </h1>
+                <h1 style="margin-left: 4rem;">PRODUCTS</h1>
+            </div>
+
+            <div class="featured-product-item second-fea" style="grid-area: box-2;">
+                <h3>New stock</h3>
+                <hr />
+                <h2>
+                    <i> NEW ARRIVAL !!</i>
+                </h2>
+                <h2>
+                    <i> NEW ARRIVAL !!</i>
+                </h2>
+              
+            </div>
+
+            <div class="featured-product-item third-fea" style="grid-area: box-3;">
+                <h3>NIKE</h3>
+            </div>
+            
+            <div class="featured-product-item fouth-fea" style="grid-area: box-4;">
+                <h3>Sneakers</h3>
+                <h1>50% DISCOUNT</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="all-products" class="products">
+        <div class="title">
+            <h2>Products</h2>
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D" alt="Green Nike Air Max">
+                <h3>Green Nike Air Max</h3>
+                <p>$19.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNob2V8ZW58MHx8MHx8fDA%3D" alt="Black Nike Zoom">
+                <h3>Black Nike Zoom</h3>
+                <p>$29.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNob2V8ZW58MHx8MHx8fDA%3D" alt="White Nike React">
+                <h3>White Nike React</h3>
+                <p>$39.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNob2V8ZW58MHx8MHx8fDA%3D" alt="Blue Nike Free">
+                <h3>Blue Nike Free</h3>
+                <p>$24.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D" alt="Red Nike Vapor">
+                <h3>Red Nike Vapor</h3>
+                <p>$34.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNob2V8ZW58MHx8MHx8fDA%3D" alt="Pink Nike Epic">
+                <h3>Pink Nike Epic</h3>
+                <p>$44.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXxlbnwwfHwwfHx8MA%3D%3D" alt="Puma RS-X">
+                <h3>Puma RS-X</h3>
+                <p>$49.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1593287073863-c992914cb3e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YWRpZGFzfGVufDB8fDB8fHww" alt="Adidas Ultraboost">
+                <h3>Adidas Ultraboost</h3>  
+                <p>$59.99</p>
+                <button class="lm">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- banner section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Exclusive Offer!</h2>
+            <p>Get 50% off on your first purchase. Use code: <strong>WELCOME20</strong></p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+        <div class="banner-image">
+            <!-- <img src="https://images.unsplash.com/photo-1520256788229-d4640c632e4b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFkaWRhc3xlbnwwfHwwfHx8MA%3D%3D" alt="Banner Image"> -->
+            <img src="https://images.unsplash.com/photo-1519931127525-6b6a7619a003?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFkaWRhc3xlbnwwfHwwfHx8MA%3D%3D" alt="Banner Image">
+        </div>
+    </section>
+
+    <!-- about secion in three column -->
+    <div class="title">
+        <h2>Why Choose us?</h2>
+    </div>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-item">
+                <i class="fas fa-star"></i>
+                <h3>Quality Products</h3>
+                <p>We offer a wide range of high-quality products to meet your needs.</p>
+            </div>
+            <div class="about-item">
+                <i class="fas fa-heart"></i>
+                <h3>Customer Satisfaction</h3>
+                <p>Your satisfaction is our top priority. We strive to provide the best service possible.</p>
+            </div>
+            <div class="about-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Shipping</h3>
+                <p>Enjoy fast and reliable shipping on all orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial" class="testimonial">
+        <div class="title">
+            <h2>Testimonials</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <p>Great products and fast shipping! Highly recommend!</p>
+                        <h4>- John Doe</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Amazing customer service and quality products.</p>
+                        <h4>- Jane Smith</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <p>I love my new shoes! Will definitely shop here again.</p>
+                        <h4>- Mike Johnson</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Exceptional quality and fantastic support team!</p>
+                        <h4>- Emily Davis</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <p>The best shopping experience I've ever had!</p>
+                        <h4>- Sarah Wilson</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Super fast delivery and great product variety.</p>
+                        <h4>- David Brown</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <p>Top-notch service and amazing attention to detail.</p>
+                        <h4>- Laura Martinez</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>My go-to store for all my needs!</p>
+                        <h4>- Chris Lee</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <p>Fantastic products and seamless checkout process.</p>
+                        <h4>- Anna Taylor</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Highly impressed with the quality and service!</p>
+                        <h4>- Tom Clark</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="prevSlide()">←</button>
+        <button class="slider-btn next" onclick="nextSlide()">→</button>
+        <div class="dots" id="dots"></div>
+    </section>
+
+    <script>
+        const wrapper = document.getElementById('sliderWrapper');
+        const slides = wrapper.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        // Create dots
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateSlider() {
+            wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+            // Debugging: Log current slide index
+            console.log(`Current slide index: ${currentIndex}`);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Ensure each slide takes exactly 100% of the container width
+        slides.forEach(slide => {
+            slide.style.flex = '0 0 100%';
+            slide.style.width = '100%';
+        });
+
+        startAutoSlide();
+        updateSlider(); // Initialize slider position
+
+        // Debugging: Log total slides and initial wrapper width
+        console.log(`Total slides: ${slides.length}`);
+        console.log(`Slider wrapper width: ${wrapper.style.width}`);
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a leading e-commerce platform offering a wide range of products at competitive prices.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email:e-store@store.com
+                </p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 E-store St, City, Country</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 E-store. All rights reserved.</p>
+            <p>Designed by Your Name</p>
+        </div>
+    </footer>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Testimonial Slider Logic
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            
+
+            function goToSlide(index) {
+                // Clamp the index to be within bounds
+                if (index < 0) {
+                    index = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    index = 0;
+                }
+                
+                sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+            
+            // Auto-play feature (optional)
+            // setInterval(() => {
+            //     goToSlide(currentIndex + 1);
+            // }, 10000);
+
+            // Initialize
+            goToSlide(0);
+        }
+    });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
