@@ -222,10 +222,12 @@ header a.btn{
 
 .product-slider .owl-nav button.owl-prev {
     left: -50px;
+    border-radius: 50%;
 }
 
 .product-slider .owl-nav button.owl-next {
     right: -50px;
+    border-radius: 50%;
 }
 
 .product-slider .owl-dots {
