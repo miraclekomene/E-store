@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- owl carousel -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>E-store Landing Page</title>
@@ -14,7 +19,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h2>E-store</h2>
+            <h1>E-store</h1>
         </div>
         <ul class="menu">
             <li><a href="#home">Home</a></li>
@@ -32,8 +37,22 @@
             </div>
         </div>
     </nav>
-    <!-- 
-    <style>
+    <!-- <svg width="0" height="0"> -->
+        <!-- <defs> -->
+            <!-- <clipPath id="header-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Header path -->
+            <!-- <path d="M 0.04,0.15 L 0.18,0.15 A 0.02,0.02 0,0,0 0.2,0.12 L 0.2,0.03 A 0.02,0.02 0,0,1 0.22,0 L 0.98,0 A 0.02,0.02 0,0,1 1,0.03 L 1,0.59 L 0.7,0.59 A 0.02,0.02 0,0,0 0.68,0.62 L 0.68,0.97 A 0.02,0.02 0,0,1 0.66,1 L 0.04,1 A 0.02,0.02 0,0,1 0.04,0.94 L 0.02,0.97 L 0.02,0.18 A 0.02,0.02 0,0,1 0.04,0.15 Z" /> -->
+            <!-- </clipPath> -->
+            <!-- <clipPath id="discount-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Discount path -->
+            <!-- </clipPath> -->
+            <!-- <clipPath id="form-clip" clipPathUnits="objectBoundingBox"> -->
+            <!-- Form path -->
+            <!-- </clipPath> -->
+        <!-- </defs> -->
+    <!-- </svg> -->
+
+    <!-- <style>
         header.hero {
             clip-path: url(#header-clip);
         }
@@ -45,180 +64,170 @@
         }
     </style> -->
 
-    <!-- Responsive SVG Clip Paths (invisible) -->
-    <svg width="0" height="0" style="position: absolute;">
-        <defs>
-            <!-- Header Clip Path (original shape preserved) -->
-            <clipPath id="hero-clip" clipPathUnits="objectBoundingBox">
-                <path d="M 0.039,0.118 L 0.176,0.118 A 0.020,0.029 0,0,0 0.196,0.088 L 0.196,0.029 A 0.020,0.029 0,0,1 0.216,0 L 0.980,0 A 0.020,0.029 0,0,1 1,0.029 L 1,0.588 L 0.686,0.588 A 0.020,0.029 0,0,0 0.667,0.618 L 0.667,0.971 A 0.020,0.029 0,0,1 0.647,1 L 0.039,1 A 0.020,0.029 0,0,1 0.039,0.941 L 0.020,0.971 L 0.020,0.147 A 0.020,0.029 0,0,1 0.039,0.118 Z" />
-            </clipPath>
+    <header class="hero">
+        <h1>Welcome to E-store</h1>
+        <p>Your one-stop shop for everything!</p>
+        <a href="#products" class="btn">Shop Now</a>
 
-            <!-- Discount Message Clip Path (original shape preserved) -->
-            <clipPath id="discount-clip" clipPathUnits="objectBoundingBox">
-                <path d="M 0.098,0 L 0.902,0 A 0.098,0.067 0,0,1 1,0.067 L 1,0.917 A 0.098,0.067 0,0,1 0.902,1 L 0.293,1 A 0.098,0.067 0,0,1 0.195,0.933 L 0.195,0.617 A 0.098,0.067 0,0,0 0.098,0.550 L 0,0.550 L 0,0.067 A 0.098,0.067 0,0,1 0.098,0 Z" />
-            </clipPath>
-        </defs>
-    </svg>
-
-    <header>
-        <section class="hero">
-            <h1>Welcome to E-store</h1>
-            <p>Your one-stop shop for everything!</p>
-            <a href="#products" class="btn">Shop Now</a>
-
-            <div class="product-slider">
-                <div class="owl-carousel owl-theme">
-                    <div class="card">
-                        <img src="./images/black_sneaker.jpg" alt="Black Classic Sneaker">
-                        <div class="text-content">
-                            <h4>Black Classic Sneaker</h4>
-                            <p>Stylish and comfortable black sneakers for everyday wear.</p>
-                        </div>
+        <div class="product-slider">
+            <div class="owl-carousel owl-theme">
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Classic Sneaker">
+                    <div class="text-content">
+                        <h4>Black Classic Sneaker</h4>
+                        <p>Stylish and comfortable black sneakers for everyday wear.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/nike_sneaker.jpg" alt="Nike Performance Sneaker">
-                        <div class="text-content">
-                            <h4>Nike Performance Sneaker</h4>
-                            <p>High-performance sneakers designed for athletes.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/nike_sneaker.jpg" alt="Nike Performance Sneaker">
+                    <div class="text-content">
+                        <h4>Nike Performance Sneaker</h4>
+                        <p>High-performance sneakers designed for athletes.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/red_nike.jpg" alt="Red Nike Pro">
-                        <div class="text-content">
-                            <h4>Red Nike Pro</h4>
-                            <p>Bold red sneakers with superior comfort and style.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Pro">
+                    <div class="text-content">
+                        <h4>Red Nike Pro</h4>
+                        <p>Bold red sneakers with superior comfort and style.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/white_sneaker.jpg" alt="White Casual Sneaker">
-                        <div class="text-content">
-                            <h4>White Casual Sneaker</h4>
-                            <p>Clean and versatile white sneakers for any occasion.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/white_sneaker.jpg" alt="White Casual Sneaker">
+                    <div class="text-content">
+                        <h4>White Casual Sneaker</h4>
+                        <p>Clean and versatile white sneakers for any occasion.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/black_sneaker.jpg" alt="Black Urban Sneaker">
-                        <div class="text-content">
-                            <h4>Black Urban Sneaker</h4>
-                            <p>Durable black sneakers with a modern urban look.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Urban Sneaker">
+                    <div class="text-content">
+                        <h4>Black Urban Sneaker</h4>
+                        <p>Durable black sneakers with a modern urban look.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/nike_sneaker.jpg" alt="Nike Elite Runner">
-                        <div class="text-content">
-                            <h4>Nike Elite Runner</h4>
-                            <p>Lightweight sneakers for enhanced running performance.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/nike_sneaker.jpg" alt="Nike Elite Runner">
+                    <div class="text-content">
+                        <h4>Nike Elite Runner</h4>
+                        <p>Lightweight sneakers for enhanced running performance.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/red_nike.jpg" alt="Red Nike Sport">
-                        <div class="text-content">
-                            <h4>Red Nike Sport</h4>
-                            <p>Vibrant red sneakers with advanced cushioning.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Sport">
+                    <div class="text-content">
+                        <h4>Red Nike Sport</h4>
+                        <p>Vibrant red sneakers with advanced cushioning.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/white_sneaker.jpg" alt="White Premium Sneaker">
-                        <div class="text-content">
-                            <h4>White Premium Sneaker</h4>
-                            <p>Premium white sneakers with a sleek design.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/white_sneaker.jpg" alt="White Premium Sneaker">
+                    <div class="text-content">
+                        <h4>White Premium Sneaker</h4>
+                        <p>Premium white sneakers with a sleek design.</p>
                     </div>
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1620794341491-76be6eeb6946?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWRpZGFzfGVufDB8fDB8fHww" alt="Red Nike Classic">
-                        <div class="text-content">
-                            <h4>Red Nike Classic</h4>
-                            <p>Classic red sneakers with timeless style.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1620794341491-76be6eeb6946?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWRpZGFzfGVufDB8fDB8fHww" alt="Red Nike Classic">
+                    <div class="text-content">
+                        <h4>Red Nike Classic</h4>
+                        <p>Classic red sneakers with timeless style.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/black_sneaker.jpg" alt="Black Pro Sneaker">
-                        <div class="text-content">
-                            <h4>Black Pro Sneaker</h4>
-                            <p>Professional-grade black sneakers for all-day comfort.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/black_sneaker.jpg" alt="Black Pro Sneaker">
+                    <div class="text-content">
+                        <h4>Black Pro Sneaker</h4>
+                        <p>Professional-grade black sneakers for all-day comfort.</p>
                     </div>
-                    <div class="card">
-                        <img src="./images/red_nike.jpg" alt="Red Nike Ultra">
-                        <div class="text-content">
-                            <h4>Red Nike Ultra</h4>
-                            <p>Ultra-light red sneakers for maximum agility.</p>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="./images/red_nike.jpg" alt="Red Nike Ultra">
+                    <div class="text-content">
+                        <h4>Red Nike Ultra</h4>
+                        <p>Ultra-light red sneakers for maximum agility.</p>
                     </div>
                 </div>
             </div>
-
-            <script>
-                const slidewrapper = document.getElementById('sliderWrapper');
-                const slidesSection = slidewrapper.querySelectorAll('.slide');
-                const dotsContainerNav = document.getElementById('dots');
-                let currentIndexNo = 0;
-                let autoSlideIntervalBehaviour;
-
-                // Create dots
-                for (let i = 0; i < slidesSection.length; i++) {
-                    const dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    if (i === 0) dot.classList.add('active');
-                    dot.addEventListener('click', () => goToSlide(i));
-                    dotsContainerNav.appendChild(dot);
-                }
-
-                function updateSlider() {
-                    slidewrapper.style.transform = `translateX(-${currentIndexNo * 100}%)`;
-                    const dots = dotsContainerNav.querySelectorAll('.dot');
-                    dots.forEach((dot, i) => {
-                        dot.classList.toggle('active', i === currentIndexNo);
-                    });
-                    console.log(`Current slide index: ${currentIndexNo}`);
-                }
-
-                function nextSlide() {
-                    currentIndexNo = (currentIndexNo + 1) % slidesSection.length;
-                    updateSlider();
-                    resetAutoSlide();
-                }
-
-                function prevSlide() {
-                    currentIndexNo = (currentIndexNo - 1 + slidesSection.length) % slidesSection.length;
-                    updateSlider();
-                    resetAutoSlide();
-                }
-
-                function goToSlide(index) {
-                    currentIndexNo = index;
-                    updateSlider();
-                    resetAutoSlide();
-                }
-
-                function startAutoSlide() {
-                    autoSlideIntervalBehaviour = setInterval(nextSlide, 5000);
-                }
-
-                function resetAutoSlide() {
-                    clearInterval(autoSlideIntervalBehaviour);
-                    startAutoSlide();
-                }
-
-                // Ensure each slide takes exactly 100% of the container width
-                slidesSection.forEach(slide => {
-                    slide.style.flex = '0 0 100%';
-                    slide.style.width = '100%';
-                });
-
-                startAutoSlide();
-                updateSlider(); // Initialize slider position
-            </script>
-        </section>
-
-        <!-- discount content -->
-        <div class="discount-message">
-            <h2>Special Offer!</h2>
-            <p>Use code <strong>WELCOME20</strong> at checkout</p>
-            <p>Limited time offer!</p>
         </div>
 
+        <script>
+            const slidewrapper = document.getElementById('sliderWrapper');
+            const slidesSection = slidewrapper.querySelectorAll('.slide');
+            const dotsContainerNav = document.getElementById('dots');
+            let currentIndexNo = 0;
+            let autoSlideIntervalBehaviour;
+
+            // Create dots
+            for (let i = 0; i < slidesSection.length; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainerNav.appendChild(dot);
+            }
+
+            function updateSlider() {
+                slidewrapper.style.transform = `translateX(-${currentIndexNo * 100}%)`;
+                const dots = dotsContainerNav.querySelectorAll('.dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndexNo);
+                });
+                console.log(`Current slide index: ${currentIndexNo}`);
+            }
+
+            function nextSlide() {
+                currentIndexNo = (currentIndexNo + 1) % slidesSection.length;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function prevSlide() {
+                currentIndexNo = (currentIndexNo - 1 + slidesSection.length) % slidesSection.length;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function goToSlide(index) {
+                currentIndexNo = index;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            function startAutoSlide() {
+                autoSlideIntervalBehaviour = setInterval(nextSlide, 5000);
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideIntervalBehaviour);
+                startAutoSlide();
+            }
+
+            // Ensure each slide takes exactly 100% of the container width
+            slidesSection.forEach(slide => {
+                slide.style.flex = '0 0 100%';
+                slide.style.width = '100%';
+            });
+
+            startAutoSlide();
+            updateSlider(); // Initialize slider position
+        </script>
+
+
     </header>
+    <!-- discount content -->
+    <div class="discount-message">
+        <h2>Special Offer!</h2>
+        <p>Use code <strong>WELCOME20</strong> at checkout</p>
+        <p>Limited time offer!</p>
+        <!-- <img src="./images/discount.png" alt="Discount Image">
+        <p>Don't miss out on our exclusive deals!</p>
+        <p>Sign up for our newsletter to stay updated!</p>
+        <p>Follow us on social media for more offers!</p>
+        <p>Free shipping on orders over $50!</p>            
+        <p>Get 20% off on your first purchase!</p>
+        <p>Shop now and save big!</p> -->
+    </div>
     <div class="form-section">
         <h2>Contact Us</h2>
         <form action="#" method="post">
@@ -525,16 +534,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> E-store. All rights reserved.</p>
+            <p>&copy; 2023 E-store. All rights reserved.</p>
             <p>Designed by Miracle Komene</p>
         </div>
     </footer>
 
 
     <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     document.addEventListener('DOMContentLoaded', () => {
 
         // Testimonial Slider Logic
@@ -578,6 +584,20 @@
         }
     });
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

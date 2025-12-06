@@ -35,13 +35,14 @@ nav a:hover{
     color: #000;
 }
 nav .logo{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 }
 nav .menu{
     display: flex;
     gap: 20px;
     align-items: center;
+    /*adding a glassy background-color  */
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     padding: 10px 20px;
@@ -73,6 +74,7 @@ nav .menu li a:hover{
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
+    /* adding linear gradient to color */
     background: linear-gradient(45deg, #a76603, #f0c14b);
     color: #fff;
     cursor: pointer;
@@ -96,37 +98,30 @@ nav .menu li a:hover{
     color: #a76603;
 }
 
-/* hero section  */
+/* header section  */
 header{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.hero{
     background-image: url('../images/sneaker2.jpg');
     background-repeat: no-repeat;
     background-color: #a76603;
-    /* background-size: cover; */
-    background-size: auto 2500px;
-    /* background-position: center; */
-    background-position:-100px -890px;
-    /* height: 100vh; */
-    width: 70%;
-    clip-path: url(#hero-clip);/* Responsive SVG clip */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /* clip-path: url(#header-clip); */
+    clip-path: path('M 40,80 L 180,80 A 20,20 0,0,0 200,60 L 200,20 A 20,20 0,0,1 220,0 L 1000,0 A 20,20 0,0,1 1020,20 L 1020,400 L 700,400 A 20,20 0,0,0 680,420 L 680,660 A 20,20 0,0,1 660,680 L 40,680 A 20,20 0,0,1 40,640 L 20,660 L 20,100 A 20,20 0,0,1 40,80 Z ');
     padding: 150px 50px 100px 50px;
     color: #fff;
 }
-.hero h1{
+header h1{
     font-size: 5.5em;
 }
 
-.hero p{
+header p{
     font-style: italic;
     font-weight: bolder;
 }
 
-.hero a.btn{
+header a.btn{
     text-decoration: none;
     color: #fff;
     display: inline-block;
@@ -181,11 +176,10 @@ header{
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    height: 100%;
 }
 
 .product-slider .card:hover .text-content {
@@ -257,24 +251,74 @@ header{
     background: #a76603;
 }
 
+@media (max-width: 1024px) {
+    .product-slider {
+        max-width: 60vw; /* Slightly wider on smaller desktops */
+    }
+
+    .product-slider .card {
+        width: 200px; /* Smaller circular cards */
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-slider {
+        max-width: 80vw; /* Wider on mobile for visibility */
+    }
+
+    .product-slider .card {
+        width: 180px; /* Smaller circular cards for mobile */
+        height: 180px;
+    }
+
+    .product-slider .owl-nav button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .product-slider .owl-nav button.owl-prev {
+        left: -40px;
+    }
+
+    .product-slider .owl-nav button.owl-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-slider {
+        max-width: 90vw; /* Nearly full width on small screens */
+    }
+
+    .product-slider .card {
+        width: 150px; /* Smaller circular cards for small screens */
+        height: 150px;
+    }
+
+    .product-slider .card h4 {
+        font-size: 0.9rem;
+    }
+
+    .product-slider .card p {
+        font-size: 0.7rem;
+    }
+}
+
+
 .discount-message{
+    position: absolute;
     background-image: url('../images/sneaker2.jpg');
     background-size: auto 2500px;
     background-color: #a0ab00;
     background-position:-4500px -3460px;
-    margin-top: 70px;
-    margin-left: 10px;
+    top: 70px;
+    right: 20px;
     width: 28%;
-    clip-path: url(#discount-clip); /* Responsive SVG clip */
-    /* height: 620px; */
-    /* height: 89vh; */
+    clip-path: path('M 40,0 L 370 0 A 40,40 0,0,1 410,40 L 410,550 A 40,40 0,0,1 370,600 L 120,600 A 40,40 0,0,1 80,560 L 80,370 A 40,40 0,0,0 40,330 L 0,330 L 0,40 A 40,40 0,0,1 40,0 Z');
+    height: 620px;
     padding: 20px;
-
-
-    /*max-width: 450px;
-    aspect-ratio: 41 / 62;*/ /* Maintains original proportions */
-    /* padding: 5%;
-    z-index: 10; */
 }
 
 .discount-message h2{
@@ -297,13 +341,10 @@ header{
     background-size: auto 2500px;
     background-position:-4600px -3460px;
     position: absolute;
-    top: 475px;
-    /* top: 68%; */
-    /* right: 363px; */
-    /* right: 24.8%; */
-    right: 25%;
+    top: 420px;
+    right: 370px;
     max-width: 430px;
-    width: 410px;
+    width: 400px;
     padding: 1rem;
     border-radius: 1.5rem;
 }
@@ -322,8 +363,7 @@ header{
     color: #ffffff;
 }
 
-.form-section div input,
-.form-section div textarea {
+.form-section div input{
     padding: 10px;
     border-radius: 50px;
     border: none;
@@ -331,11 +371,14 @@ header{
     width: 100%;
     outline: none;
 }
-
-.form-section div textarea {
+.form-section div textarea{
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    margin: 5px 0;
+    width: 100%;
+    outline: none;
     resize: none;
-    height: 100px;
-    border-radius: 20px;
 }
 
 .featured-products{
@@ -1027,39 +1070,59 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .hero p {
+    .footer-section.social .social-links {
+        justify-content: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center underline on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-section {
+        padding: 15px;
+    }
+
+    .footer-section h3 {
         font-size: 1.2rem;
     }
 
-    .hero {
-        width: 96%;
-        margin: 0 auto;
+    .footer-section p, .footer-section a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
     }
 
     .discount-message {
-        width: 80%;
+        width: 40%;
         right: 10px;
-        height: 620px;
     }
 
     .form-section {
         right: 10px;
         max-width: 350px;
-    }
-
-
-    .product-slider {
-        max-width: 60vw; /* Slightly wider on smaller desktops */
-    }
-
-    .product-slider .card {
-        width: 200px; /* Smaller circular cards */
-        height: 200px;
     }
 }
 
@@ -1085,15 +1148,15 @@ footer {
         gap: 10px;
     }
 
-    .hero {
+    header {
         padding: 100px 20px 50px;
     }
 
-    .hero h1 {
+    header h1 {
         font-size: 2.5rem;
     }
 
-    .hero p {
+    header p {
         font-size: 1rem;
     }
 
@@ -1101,122 +1164,32 @@ footer {
         height: 200px;
     }
 
-    /* .discount-message {
-        width: 100%;
-        max-width: 100%;
-        margin: 20px auto;
-    }
-
-    .form-section {
-        width: 100%;
-        max-width: 100%;
-        margin: 20px auto;
-    } */
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-section.social .social-links {
-        justify-content: center;
-    }
-
-    .footer-section h3::after {
-        left: 50%;
-        transform: translateX(-50%); /* Center underline on mobile */
-    }
-
-
-
-
-
-    .product-slider {
-        max-width: 80vw; /* Wider on mobile for visibility */
-    }
-
-    .product-slider .card {
-        width: 180px; /* Smaller circular cards for mobile */
-        height: 180px;
-    }
-
-    .product-slider .owl-nav button {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    .product-slider .owl-nav button.owl-prev {
-        left: -40px;
-    }
-
-    .product-slider .owl-nav button.owl-next {
-        right: -40px;
-    }
-
-
-    .form-section {
-        position: relative;
-        width: 80%;
-        max-width: none;
-        margin: 2rem auto;
-        top: auto;
-        right: auto;
-    }
     .discount-message {
-        position: relative;
-        width: 80%;
-        max-width: none;
-        margin: 2rem auto;
-        top: auto;
-        right: auto;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .form-section {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
+    header h1 {
         font-size: 2rem;
     }
 
-    .hero a.btn {
+    header a.btn {
         padding: 10px 20px;
         font-size: 1rem;
     }
 
     .product-slider .card img {
         height: 180px;
-    }
-
-    .product-slider {
-        max-width: 90vw; /* Nearly full width on small screens */
-    }
-
-    .product-slider .card {
-        width: 150px; /* Smaller circular cards for small screens */
-        height: 150px;
-    }
-
-    .product-slider .card h4 {
-        font-size: 0.9rem;
-    }
-
-    .product-slider .card p {
-        font-size: 0.7rem;
-    }
-
-    footer {
-        padding: 40px 15px 20px;
-    }
-
-    .footer-section {
-        padding: 15px;
-    }
-
-    .footer-section h3 {
-        font-size: 1.2rem;
-    }
-
-    .footer-section p, .footer-section a {
-        font-size: 0.9rem;
     }
 }
