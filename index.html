@@ -14,7 +14,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h2>E-store</h2>
+            <h1>E-store</h1>
         </div>
         <ul class="menu">
             <li><a href="#home">Home</a></li>
@@ -25,13 +25,56 @@
         <div class="cart_and_search">
             <div class="search-bar">
                 <input type="text" placeholder="Search products...">
-                <button type="submit">Search</button>
+                <button type="submit"><i class="fas fa-search"></i>Search</button>
             </div>
             <div class="cart">
                 <a href="#cart"><i class="fas fa-shopping-cart"></i> (0)</a>
             </div>
         </div>
+        <!-- Hamburger Icon -->
+        <button class="hamburger" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
+
+    <!-- Mobile Full-Screen Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Search & Cart in Mobile Menu -->
+        <div class="mobile-actions">
+            <div class="mobile-search">
+                <input type="text" placeholder="Search products...">
+            </div>
+            <a href="#cart" class="mobile-cart-btn">
+                <i class="fas fa-shopping-cart"></i> Cart (0)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const icon = hamburger.querySelector('i');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close when clicking any link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                icon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
     <!-- 
     <style>
         header.hero {

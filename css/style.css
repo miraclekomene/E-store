@@ -17,12 +17,17 @@ nav{
     top: 0;
     display: flex; 
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     z-index: 1000;      
 }
 
 .logo{
     padding: 10px 0 0 30px;
+}
+.logo h1 {
+    font-weight: bold;
+    color: #a76603;
 }
 
 nav a{
@@ -63,10 +68,23 @@ nav .menu li a:hover{
     gap: 20px;
 }
 
+.search-bar {
+    position: relative;
+}
+
 .cart_and_search .search-bar input[type="text"]{
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 50px;
+}
+.search-bar input:focus {
+    border-color: #a76603;
+    box-shadow: 0 0 0 4px rgba(167,102,3,0.15);
+}
+
+.search-bar input:focus ~ button{
+    transform: translateX(-50%) scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .cart_and_search .search-bar button{
@@ -80,6 +98,8 @@ nav .menu li a:hover{
 
 .cart_and_search .search-bar button:hover{
     background: linear-gradient(45deg, #f0c14b, #a76603);
+    transform: translateX(-50%) scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 .cart_and_search .cart a{
     display: flex;
@@ -95,6 +115,129 @@ nav .menu li a:hover{
 .cart_and_search .cart a:hover{
     color: #a76603;
 }
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    /* background: none; */
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #2f2e2e;
+    background-color: #a76603;
+    color: white;
+    padding: 10px 15px;
+}
+
+/* Mobile Menu - Full Screen */
+.mobile-menu {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.97);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.7s ease;
+}
+
+.mobile-menu.active a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu a:hover {
+    color: #f0c14b;
+    text-shadow: 0 0 20px rgba(240,193,75,0.6);
+}
+
+/* Mobile Search & Cart inside menu */
+.mobile-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease 0.3s;
+}
+
+.mobile-menu.active .mobile-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-search input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-search input::placeholder { color: rgba(255,255,255,0.7); }
+
+.mobile-cart-btn {
+    background: linear-gradient(45deg, #a76603, #f0c14b);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .search-bar input { width: 180px; }
+}
+
+@media (max-width: 768px) {
+    nav { padding: 15px 20px; }
+    .menu, .cart_and_search { display: none; }
+    .hamburger { display: block; }
+}
+
+@media (max-width: 480px) {
+    .logo h1 { font-size: 22px; }
+    .mobile-menu a { font-size: 30px; }
+}
+
+
 
 /* hero section  */
 header{
@@ -1065,7 +1208,10 @@ footer {
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        /* blur background ; */
+        /* background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px); */
+        /* flex-direction: column; */
         padding: 10px;
     }
 
@@ -1074,14 +1220,16 @@ footer {
     }
 
     nav .menu {
-        flex-direction: column;
+        display: none;
+        /* flex-direction: column; */
         gap: 10px;
         width: 100%;
         text-align: center;
     }
 
     .cart_and_search {
-        flex-direction: column;
+        display: none;
+        /* flex-direction: column; */
         gap: 10px;
     }
 
